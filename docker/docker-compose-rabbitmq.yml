@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=12345
+    ports:
+      - '5433:5432'
+    volumes:
+      - /home/[local_path]/Postgres/docker_postgres:/var/lib/postgresql/data
